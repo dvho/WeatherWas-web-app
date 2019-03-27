@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+
+.time {
+    font-size: 30px;
+    color: blue;
+}
+.country-drop-down {
+    font-size: 30px;
+    border: none;
+    background-color: red;
+    opacity: .5;
+}
+.state-drop-down {
+    font-size: 30px;
+    border: none;
+    background-color: blue;
+    opacity: .5;
+}
+.city-drop-down {
+    font-size: 30px;
+    border: none;
+    background-color: green;
+    opacity: .5;
+}
+.submit {
+    font-size: 30px;
+    border: none;
+    background-color: orange;
+    opacity: .5;
+}
+
+
+.test2 {
+    position: absolute;
+    width: 100px;
+    left: 200px;
+}

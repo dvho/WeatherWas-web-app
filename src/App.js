@@ -1,8 +1,8 @@
 import React from 'react';
-import CityData from '../CityData';
-import Options from './Options';
-import RenderWeather from './RenderWeather';
-import '../App.css';
+import CityData from './CityData';
+import Options from './components/Options';
+import RenderWeather from './components/RenderWeather';
+import './App.css';
 
 class App extends React.Component {
     constructor() {

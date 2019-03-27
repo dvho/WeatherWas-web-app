@@ -55,7 +55,7 @@ class RenderWeather extends React.Component {
 
     fetchCurrData(props) {
         console.log(this.state.woeid);
-        fetch(`http://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${this.state.woeid}/`)
+        fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${this.state.woeid}/`)
         .then(response => response.json())
         .then(currData => this.setState({
             currData: currData
@@ -64,7 +64,7 @@ class RenderWeather extends React.Component {
 
     fetchPrevData(props) {
         console.log(this.state.woeid);
-        fetch(`http://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${this.state.woeid}/${this.state.year}/${this.state.numericMonth}/${this.state.dayOfMonth}/`)
+        fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${this.state.woeid}/${this.state.year}/${this.state.numericMonth}/${this.state.dayOfMonth}/`)
         .then(response => response.json())
         .then(prevData => this.setState({
             prevData: prevData

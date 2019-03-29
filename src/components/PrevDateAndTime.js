@@ -182,7 +182,7 @@ function PrevDateAndTime(props) {
 
     return(
         <div>
-            <div style={{display: dayInSeconds >= 75480 ? 'block' : 'none'}}><DisplayDate month={month} day={day} year={year}/></div>
+            <div style={{display: props.dayOfMonth === day || dayInSeconds <= 75480 ? 'none' : 'block'}}><DisplayDate month={month} day={day} year={year}/></div>
             <p className='time'>{`${hour}:${minute}${amPM}`}</p>
         </div>
     )

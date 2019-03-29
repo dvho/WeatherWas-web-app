@@ -95,7 +95,7 @@ class RenderWeather extends React.Component {
 
         if (this.state.prevData !== null) {
             this.state.prevData.forEach(i => {
-                previousWeather.push(<div key={i.id}><PrevDateAndTime prevData={i} gmtDifferential={this.state.gmtDifferential}/><WeatherBlock prevData={i}/></div>)
+                previousWeather.push(<div key={i.id}><PrevDateAndTime dayOfMonth={this.state.dayOfMonth} prevData={i} gmtDifferential={this.state.gmtDifferential}/><WeatherBlock prevData={i}/></div>)
             });
         }
 

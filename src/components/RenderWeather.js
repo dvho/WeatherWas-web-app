@@ -105,7 +105,7 @@ class RenderWeather extends React.Component {
 
         return (
             <div>
-                <CurrDateAndTime state={this.state}/>
+                <div style={{display: this.state.year === 0? 'none' : 'block'}}><CurrDateAndTime state={this.state}/></div>
                 <WeatherBlock prevData={currentWeather}/>
                 {previousWeather}
             </div>

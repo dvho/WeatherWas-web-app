@@ -132,7 +132,7 @@ class App extends React.Component {
                 <select className='country-drop-down' onChange={this.countryInput}>
                     <option>Country</option>{countries}
                 </select>
-                <select className='state-drop-down' onChange={this.stateInput}>
+                <select style={{display: this.state.countrySelection === 'United States' ? 'inline' : 'none'}} className='state-drop-down' onChange={this.stateInput}>
                     <option>State</option>{states}
                 </select>
                 <select className='city-drop-down' onChange={this.cityInput}>

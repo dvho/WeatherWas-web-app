@@ -1,5 +1,6 @@
 import React from 'react';
 import DisplayDate from './DisplayDate';
+import DisplayTime from './DisplayTime'
 
 function PrevDateAndTime(props) {
 
@@ -183,7 +184,7 @@ function PrevDateAndTime(props) {
     return(
         <div>
             <div style={{display: props.dayOfMonth === day || dayInSeconds <= 75480 ? 'none' : 'block'}}><DisplayDate month={month} day={day} year={year}/></div>
-            <p className='time'>{hour}:{minute}{amPM}</p>
+            <DisplayTime hour={hour} minute={minute} amPM={amPM}/>
         </div>
     )
 }

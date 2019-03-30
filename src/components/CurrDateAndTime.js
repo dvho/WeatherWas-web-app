@@ -1,5 +1,6 @@
 import React from 'react';
 import DisplayDate from './DisplayDate';
+import DisplayTime from './DisplayTime';
 
 function CurrDateAndTime(props) {
 
@@ -181,7 +182,7 @@ function CurrDateAndTime(props) {
     return(
         <div>
             <DisplayDate month={month} day={day} year={year}/>
-            <p className='time'>{hour}:{minute}{amPM}</p>
+            <DisplayTime hour={hour} minute={minute} amPM={amPM}/>
         </div>
     )
 }

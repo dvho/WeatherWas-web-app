@@ -11,7 +11,8 @@ class App extends React.Component {
             countrySelection: null,
             stateSelection: null,
             citySelection: null,
-            woeid: null
+            woeid: null,
+            cityGmtDifferential: 0
         }
         this.countryInput = this.countryInput.bind(this);
         this.stateInput = this.stateInput.bind(this);
@@ -48,33 +49,40 @@ class App extends React.Component {
             CityData.forEach(i => {
                 if (i.city === this.state.citySelection) {
                     this.setState({
-                        woeid: i.woeid
+                        woeid: i.woeid,
+                        cityGmtDifferential: i.cityGmtDifferential
                     })
                 }
             })
         } else if (this.state.citySelection === 'Birmingham' && this.state.countrySelection === 'United Kingdom') {
             this.setState({
-                woeid: "12723"
+                woeid: "12723",
+                cityGmtDifferential: 0
             })
         } else if (this.state.citySelection === 'Birmingham' && this.state.countrySelection === 'United States') {
             this.setState({
-                woeid: "2364559"
+                woeid: "2364559",
+                cityGmtDifferential: -5
             })
         } else if (this.state.citySelection === 'Manchester' && this.state.countrySelection === 'United Kingdom') {
             this.setState({
-                woeid: "28218"
+                woeid: "28218",
+                cityGmtDifferential: 0
             })
         } else if (this.state.citySelection === 'Manchester' && this.state.countrySelection === 'United States') {
             this.setState({
-                woeid: "2444674"
+                woeid: "2444674",
+                cityGmtDifferential: -4
             })
         } else if (this.state.citySelection === 'Portland' && this.state.stateSelection === 'Maine') {
             this.setState({
-                woeid: "2475688"
+                woeid: "2475688",
+                cityGmtDifferential: -4
             })
         } else if (this.state.citySelection === 'Portland' && this.state.stateSelection === 'Oregon') {
             this.setState({
-                woeid: "2475687"
+                woeid: "2475687",
+                cityGmtDifferential: -7
             })
         }
     }
@@ -112,6 +120,7 @@ class App extends React.Component {
                         cities.push(i.city);
                     }
                 })
+                //Alphabetize them, iterate over them and make the array of strings an array of option elements using Options
                 cities.sort().forEach(i => {
                     cities.push(<Options key={i} option={i}/>)
                 })
@@ -122,11 +131,12 @@ class App extends React.Component {
                         cities.push(i.city);
                     }
                 })
+                //Alphabetize them, iterate over them and make the array of strings an array of option elements using Options
                 cities.sort().forEach(i => {
                     cities.push(<Options key={i} option={i}/>)
                 })
             }
-
+            //Return all the drop down menus by placing the arrays of the option component and conditionally render the states array if the countrySelection is 'United States'
         return(
             <div>
                 <select className='country-drop-down' onChange={this.countryInput}>
@@ -139,7 +149,7 @@ class App extends React.Component {
                     <option>City</option>{cities}
                 </select>
                 <button className='submit' onClick={this.woeidInput}>Submit!</button>
-                <RenderWeather woeid={this.state.woeid}/>
+                <RenderWeather woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential}/>
             </div>
 
         )

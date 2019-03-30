@@ -3,7 +3,7 @@ import DisplayDate from './DisplayDate';
 
 function PrevDateAndTime(props) {
 
-    let gmtDifferential = props.gmtDifferential;
+    let cityGmtDifferential = props.cityGmtDifferential;
     let year = parseInt((props.prevData.created).substring(0,4));
     let month = parseInt((props.prevData.created).substring(5,7));
     let day = parseInt((props.prevData.created).substring(8,10));
@@ -11,17 +11,17 @@ function PrevDateAndTime(props) {
     let minute = parseInt((props.prevData.created).substring(14,16));
     let amPM = '';
     let dayInSeconds = 0;
-    // Factor in the gmtDifferential
-    if (hour + gmtDifferential < 0) {
-        hour += gmtDifferential + 24;
-        day = day - 1; // If factoring in gmtDifferential offset the day, adjust it
-    } else if (hour + gmtDifferential >= 24) {
+    // Factor in the cityGmtDifferential
+    if (hour + cityGmtDifferential < 0) {
+        hour += cityGmtDifferential + 24;
+        day = day - 1; // If factoring in cityGmtDifferential offset the day, adjust it
+    } else if (hour + cityGmtDifferential >= 24) {
         hour = hour - 24;
         day += day;
     } else {
-        hour += gmtDifferential;
+        hour += cityGmtDifferential;
     }
-    // If factoring in the gmtDifferential made the day 0, adjust the month (could adjust the year here too, but there's no point since it would look tacky on the interface)
+    // If factoring in the cityGmtDifferential made the day 0, adjust the month (could adjust the year here too, but there's no point since it would look tacky on the interface)
     if ((day === 0) && (month === 12)) {
         day = 30;
         month = 11;
@@ -74,7 +74,7 @@ function PrevDateAndTime(props) {
         day = 31;
         month = 12;
     }
-    // If factoring in the gmtDifferential made the day greater than it should be for that calendar month, adjust the month (could adjust the year here too, but there's no point since it would look tacky on the interface)
+    // If factoring in the cityGmtDifferential made the day greater than it should be for that calendar month, adjust the month (could adjust the year here too, but there's no point since it would look tacky on the interface)
     if ((day === 32) && (month === 12)) {
         day = 1;
         month = 1;
@@ -183,7 +183,7 @@ function PrevDateAndTime(props) {
     return(
         <div>
             <div style={{display: props.dayOfMonth === day || dayInSeconds <= 75480 ? 'none' : 'block'}}><DisplayDate month={month} day={day} year={year}/></div>
-            <p className='time'>{`${hour}:${minute}${amPM}`}</p>
+            <p className='time'>{hour}:{minute}{amPM}</p>
         </div>
     )
 }

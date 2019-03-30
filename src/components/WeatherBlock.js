@@ -12,7 +12,7 @@ function Weatherblock(props) {
     }
 
     if ((props.prevData.weather_state_name) && (props.prevData.weather_state_name === 'Heavy Cloud')) {
-        generalCondition = 'Mostly Cloudy';
+        generalCondition = 'Cloudy';
     } else if ((props.prevData.weather_state_name) && (props.prevData.weather_state_name === 'Light Cloud')) {
         generalCondition = 'Partly Cloudy';
     } else {

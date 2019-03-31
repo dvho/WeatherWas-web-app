@@ -5,7 +5,7 @@ import PrevDateAndTime from './PrevDateAndTime';
 import CurrDateAndTime from './CurrDateAndTime';
 import WeatherBlock from './WeatherBlock';
 
-class RenderWeather extends React.Component {
+class GetWeatherData extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -88,9 +88,9 @@ class RenderWeather extends React.Component {
     }
 
 
-
     render() {
         //Render previousWeather by looping over array and passing the parsed timestamp as props to PrevDateAndTime and the localGmtDifferential to the WeatherBlock
+        
         const previousWeather = [];
         let currentWeather = [];
 
@@ -115,4 +115,4 @@ class RenderWeather extends React.Component {
     }
 }
 
-export default RenderWeather;
+export default GetWeatherData;

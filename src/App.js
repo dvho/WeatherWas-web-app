@@ -1,7 +1,7 @@
 import React from 'react';
 import CityData from './CityData';
 import Options from './components/Options';
-import RenderWeather from './components/RenderWeather';
+import GetWeatherData from './components/GetWeatherData';
 import './App.css';
 
 class App extends React.Component {
@@ -149,7 +149,7 @@ class App extends React.Component {
                     <option>City</option>{cities}
                 </select>
                 <button className='submit' onClick={this.woeidInput}>Submit!</button>
-                <RenderWeather woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential}/>
+                <GetWeatherData woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential}/>
             </div>
 
         )

@@ -4,6 +4,8 @@ import DisplayTime from './DisplayTime'
 
 function PrevDateAndTime(props) {
 
+    let currentDayOfMonth = props.dayOfMonth;
+    let timeZoneConvertedDayOfMonth;
     let cityGmtDifferential = props.cityGmtDifferential;
     let year = parseInt((props.prevData.created).substring(0,4));
     let month = parseInt((props.prevData.created).substring(5,7));
@@ -16,12 +18,17 @@ function PrevDateAndTime(props) {
     if (hour + cityGmtDifferential < 0) {
         hour += cityGmtDifferential + 24;
         day = day - 1; // If factoring in cityGmtDifferential offset the day, adjust it
+        timeZoneConvertedDayOfMonth = currentDayOfMonth - 1;
     } else if (hour + cityGmtDifferential >= 24) {
-        hour = hour - 24;
-        day += day;
+        hour = hour + cityGmtDifferential - 24;
+        day = day + 1;
+        timeZoneConvertedDayOfMonth = currentDayOfMonth + 1;
     } else {
         hour += cityGmtDifferential;
     }
+
+
+
     // If factoring in the cityGmtDifferential made the day 0, adjust the month (could adjust the year here too, but there's no point since it would look tacky on the interface)
     if ((day === 0) && (month === 12)) {
         day = 30;
@@ -182,8 +189,8 @@ function PrevDateAndTime(props) {
     minute = (minute/100).toFixed(2).toString().substring(2,4); //Account for minutes 0-9;
 
     return(
-        <div>
-            <div style={{display: props.dayOfMonth === day || dayInSeconds <= 75480 ? 'none' : 'block'}}><DisplayDate month={month} day={day} year={year}/></div>
+        <div className="previous-date-time">
+            <div style={{display: timeZoneConvertedDayOfMonth === day || dayInSeconds <= 75480 ? 'none' : 'block'}}><DisplayDate month={month} day={day} year={year}/></div>
             <DisplayTime hour={hour} minute={minute} amPM={amPM}/>
         </div>
     )

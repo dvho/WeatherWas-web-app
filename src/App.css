@@ -109,6 +109,7 @@ body {
     text-shadow: 2px 2px 7px rgba(0,0,0,.2);
     margin: 0;
     overflow: hidden;
+    line-height: 1.4;
 }
 
 #map {
@@ -129,7 +130,7 @@ body {
 
 .results-container {
     height: 100vh; /* Make container height equal and responsive to viewport height */
-    min-width: 400px;
+    min-width: 320px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -148,7 +149,7 @@ body {
     transform: rotate(180deg);
     margin-left: 8%;
     width: 82%;
-    margin-top: 0px;
+    margin-top: -30px;
     margin-bottom: 0px;
 }
 .previous-block {
@@ -169,7 +170,7 @@ body {
 }
 .wind-data {
     position: relative;
-    top: -131px;
+    top: -84px;
     left: 240px;
 }
 

@@ -23,11 +23,11 @@ function Weatherblock(props) {
 
     return(
         <div>
-            <p style={{display: props.prevData.the_temp ? 'block' : 'none'}}>{theTempF} ºF / {theTempC} ºC</p>
-            <p style={{display: props.prevData.weather_state_name ? 'block' : 'none'}}>{generalCondition}</p>
-            <p style={{visibility: props.prevData.humidity ? 'visible' : 'hidden'}}>Humidity: {props.prevData.humidity}%</p>
-            <div className="wind-data"><p style={{display: props.prevData.wind_direction_compass ? 'block' : 'none'}}>Wind Direction: {props.prevData.wind_direction_compass}</p>
-            <p style={{display: props.prevData.wind_speed ? 'block' : 'none'}}>Wind Speed: {Math.round(props.prevData.wind_speed)}mph</p></div>
+            <div style={{display: props.prevData.the_temp ? 'block' : 'none'}}>{theTempF} ºF / {theTempC} ºC</div>
+            <div style={{display: props.prevData.weather_state_name ? 'block' : 'none'}}>{generalCondition}</div>
+            <div style={{visibility: props.prevData.humidity ? 'visible' : 'hidden'}}>Humidity: {props.prevData.humidity}%</div>
+            <div className="wind-data"><div style={{display: props.prevData.wind_direction_compass ? 'block' : 'none'}}>Wind Direction: {props.prevData.wind_direction_compass}</div>
+            <div style={{display: props.prevData.wind_speed ? 'block' : 'none'}}>Wind Speed: {Math.round(props.prevData.wind_speed)}mph</div></div>
         </div>
     )
 }

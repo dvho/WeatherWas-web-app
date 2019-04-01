@@ -82,7 +82,7 @@ function DisplayDate(props) {
     }
 
     return(
-        <h1>{dayOfWeek}, {month} {day} {year}</h1>
+        <h2>{dayOfWeek}, {month} {day} {year}</h2>
     )
 
 }

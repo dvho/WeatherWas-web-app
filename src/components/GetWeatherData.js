@@ -22,11 +22,21 @@ class GetWeatherData extends React.Component {
             localGmtDifferential: '',
             woeid: 'null',
             cityGmtDifferential: 0,
-            netDifferential: 0
+            netDifferential: 0,
+            historyChoice: 0
         }
         this.parseTimeAndDifferential = this.parseTimeAndDifferential.bind(this);
         this.fetchCurrData = this.fetchCurrData.bind(this);
         this.fetchPrevData = this.fetchPrevData.bind(this);
+        this.chooseWeatherBlock = this.chooseWeatherBlock.bind(this);
+    }
+
+    //Callback function for slider that sets value of slider in state to be used as index of previousWeather array in choosing to display a PrevDateAndTime and WeatherBlock
+    chooseWeatherBlock(e) {
+        let historyChoice = e.target.value;
+        this.setState({
+            historyChoice: historyChoice
+        })
     }
 
     parseTimeAndDifferential() {
@@ -90,7 +100,7 @@ class GetWeatherData extends React.Component {
 
     render() {
         //Render previousWeather by looping over array and passing the parsed timestamp as props to PrevDateAndTime and the localGmtDifferential to the WeatherBlock
-        
+
         const previousWeather = [];
         let currentWeather = [];
 
@@ -104,12 +114,17 @@ class GetWeatherData extends React.Component {
             currentWeather = this.state.currData.consolidated_weather[0];
         }
 
+        let maxHistoryRange = previousWeather.length - 1;
+
         //If the data are not null, indicated by this.state.year not being 0, return the data as those components
         return (
-            <div>
-                <div style={{display: this.state.year === 0? 'none' : 'block'}}><CurrDateAndTime state={this.state}/></div>
-                <WeatherBlock prevData={currentWeather}/>
-                {previousWeather}
+            <div className='results-container' style={{display: this.state.year === 0 ? 'none' : 'flex'}}>
+
+                <div className='current-block'><div><CurrDateAndTime state={this.state}/><WeatherBlock prevData={currentWeather}/></div></div>
+
+                <input className='chronology-slider' type='range' min='0' max={maxHistoryRange} onChange={this.chooseWeatherBlock}/>
+
+                <div className='previous-block'>{previousWeather[this.state.historyChoice]}</div>
             </div>
         );
     }

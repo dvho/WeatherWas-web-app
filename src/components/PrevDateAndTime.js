@@ -4,8 +4,8 @@ import DisplayTime from './DisplayTime'
 
 function PrevDateAndTime(props) {
 
-    let currentDayOfMonth = props.dayOfMonth;
-    let timeZoneConvertedDayOfMonth;
+    //let currentDayOfMonth = props.dayOfMonth;
+    //let timeZoneConvertedDayOfMonth;
     let cityGmtDifferential = props.cityGmtDifferential;
     let year = parseInt((props.prevData.created).substring(0,4));
     let month = parseInt((props.prevData.created).substring(5,7));
@@ -13,16 +13,16 @@ function PrevDateAndTime(props) {
     let hour = parseInt((props.prevData.created).substring(11,13));
     let minute = parseInt((props.prevData.created).substring(14,16));
     let amPM = '';
-    let dayInSeconds = 0;
+    //let dayInSeconds = 0;
     // Factor in the cityGmtDifferential
     if (hour + cityGmtDifferential < 0) {
         hour += cityGmtDifferential + 24;
         day = day - 1; // If factoring in cityGmtDifferential offset the day, adjust it
-        timeZoneConvertedDayOfMonth = currentDayOfMonth - 1;
+        //timeZoneConvertedDayOfMonth = currentDayOfMonth - 1;
     } else if (hour + cityGmtDifferential >= 24) {
         hour = hour + cityGmtDifferential - 24;
         day = day + 1;
-        timeZoneConvertedDayOfMonth = currentDayOfMonth + 1;
+        //timeZoneConvertedDayOfMonth = currentDayOfMonth + 1;
     } else {
         hour += cityGmtDifferential;
     }
@@ -136,7 +136,7 @@ function PrevDateAndTime(props) {
         month = 2;
     }
 
-    dayInSeconds = (minute * 60) + (hour * 3600);
+    //dayInSeconds = (minute * 60) + (hour * 3600);
 
     if (month === 1) {
         month = 'January';
@@ -188,9 +188,11 @@ function PrevDateAndTime(props) {
 
     minute = (minute/100).toFixed(2).toString().substring(2,4); //Account for minutes 0-9;
 
+    //<div style={{display: timeZoneConvertedDayOfMonth === day || dayInSeconds <= 75480 ? 'none' : 'block'}}><DisplayDate month={month} day={day} year={year}/></div>
+
     return(
-        <div className="previous-date-time">
-            <div style={{display: timeZoneConvertedDayOfMonth === day || dayInSeconds <= 75480 ? 'none' : 'block'}}><DisplayDate month={month} day={day} year={year}/></div>
+        <div className='previous-date-time'>
+            <div style={{display: 'block'}}><DisplayDate month={month} day={day} year={year}/></div>
             <DisplayTime hour={hour} minute={minute} amPM={amPM}/>
         </div>
     )

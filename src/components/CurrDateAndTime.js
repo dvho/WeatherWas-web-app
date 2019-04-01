@@ -7,7 +7,6 @@ function CurrDateAndTime(props) {
     let year = props.state.year;
     let month = props.state.month;
     let day = props.state.dayOfMonth;
-    let dayOfWeek = props.dayOfWeek;
     let hour = props.state.hours;
     let minute = ((props.state.minutes)/100).toFixed(2).toString().substring(2,4); //Account for minutes 0-9;
     let netDifferential = props.state.netDifferential;

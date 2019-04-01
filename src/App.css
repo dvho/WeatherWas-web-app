@@ -1,3 +1,5 @@
+/*
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,7 +21,6 @@ body {
 }
 
 .previous-date-time {
-
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
     margin-left: 50px;
@@ -35,6 +36,11 @@ body {
 }
 
 
+.weather-icon {
+    position: absolute;
+    width: 100px;
+    left: 500px;
+}
 
 
 
@@ -44,13 +50,134 @@ body {
 
 
 
+
+
+
+
+
+.results-container {
+    display: flex;
+    align-items: stretch;
+    align-items: baseline;
+    border: 5px solid black;
+}
+.chronology-slider {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    padding: 0;
+    margin-left: 2%;
+    transform: rotate(90deg);
+    transform-origin: left;
+}
+.current-block {
+    display: flex;
+    flex-direction: row;
+    flex: 4;
+
+    background: #00b4ff;
+    padding-left: 10%;
+    padding-top: 4%;
+    padding-bottom: 10%;
+}
+.previous-block {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    background: #ccc;
+    padding-left: 10%;
+    padding-top: 4%;
+    padding-bottom: 10%;
+}
+
+.time {
+    font-size: 20px;
+    text-align: center;
+}
+.wind-data {
+    text-align: right;
+    margin-top: -104px;
+}
+
+*/
+
+body {
+    color: #000;
+    font-size: 20px;
+    text-shadow: 2px 2px 7px rgba(0,0,0,.2);
+    margin: 0;
+    overflow: hidden;
+}
+
+#map {
+    position: absolute;
+    top: -1px; /* For some reason this allows map to render with position absolute rather than relative to rest of app */
+    left: -20%; /* These properties push zoom and branding of map outside the viewport */
+    width: 120%; /* These properties push zoom and branding of map outside the viewport */
+    height: 120%; /* These properties push zoom and branding of map outside the viewport */
+    z-index: -1;
+    opacity: .5;
+}
+
+.input-container {
+    display: flex;
+}
+
+
+
+.results-container {
+    height: 100vh; /* Make container height equal and responsive to viewport height */
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.current-block {
+    display: flex;
+    flex: 1;
+    min-height: 270px;
+    flex-direction: column;
+    padding-left: 8%;
+    /* background-color: blue; This value will be set according to sky condition data */
+}
+.chronology-slider {
+    display: flex;
+    flex: 1;
+    transform: rotate(180deg);
+    margin-left: 8%;
+    width: 82%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.previous-block {
+    display: flex;
+    flex: 1;
+    min-height: 270px;
+    flex-direction: column;
+    padding-left: 8%;
+    margin-bottom: 10%;
+    /* background-color: gray; This value will be set according to sky condition data */
+}
 
 
 
 .time {
-    font-size: 30px;
-    color: blue;
+    position: relative;
+    left: 146px;
 }
+.wind-data {
+    position: relative;
+    top: -131px;
+    left: 240px;
+}
+
+
+
+
+
+
 .country-drop-down {
     font-size: 30px;
     border: none;
@@ -74,11 +201,4 @@ body {
     border: none;
     background-color: orange;
     opacity: .5;
-}
-
-
-.weather-icon {
-    position: absolute;
-    width: 100px;
-    left: 500px;
 }

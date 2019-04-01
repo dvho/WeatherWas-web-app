@@ -105,7 +105,7 @@ body {
 
 body {
     color: #000;
-    font-size: 20px;
+    font-size: 16px;
     text-shadow: 2px 2px 7px rgba(0,0,0,.2);
     margin: 0;
     overflow: hidden;
@@ -119,7 +119,7 @@ body {
     width: 120%; /* These properties push zoom and branding of map outside the viewport */
     height: 120%; /* These properties push zoom and branding of map outside the viewport */
     z-index: -1;
-    opacity: .5;
+    opacity: .3;
 }
 
 .input-container {
@@ -141,6 +141,7 @@ body {
     min-height: 270px;
     flex-direction: column;
     padding-left: 8%;
+    margin-bottom: -54px;
     /* background-color: blue; This value will be set according to sky condition data */
 }
 .chronology-slider {
@@ -150,7 +151,7 @@ body {
     margin-left: 8%;
     width: 82%;
     margin-top: -56px;
-    margin-bottom: -20px;
+
 }
 .previous-block {
     display: flex;
@@ -167,14 +168,14 @@ body {
 }
 .time {
     position: relative;
-    color: blue;
-    top: -22px;
-    left: 114px;
+    color: red;
+    top: -16px;
+    left: 104px;
 }
 .wind-data {
     position: relative;
-    top: -84px;
-    left: 170px;
+    top: -67px;
+    left: 160px;
 }
 
 

@@ -149,8 +149,8 @@ body {
     transform: rotate(180deg);
     margin-left: 8%;
     width: 82%;
-    margin-top: -30px;
-    margin-bottom: 0px;
+    margin-top: -56px;
+    margin-bottom: -20px;
 }
 .previous-block {
     display: flex;
@@ -162,16 +162,19 @@ body {
     /* background-color: gray; This value will be set according to sky condition data */
 }
 
-
-
+.weather-block {
+    margin-top: -30px;
+}
 .time {
     position: relative;
-    left: 146px;
+    color: blue;
+    top: -22px;
+    left: 114px;
 }
 .wind-data {
     position: relative;
     top: -84px;
-    left: 240px;
+    left: 170px;
 }
 
 

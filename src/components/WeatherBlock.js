@@ -22,7 +22,7 @@ function Weatherblock(props) {
     //<span className='weather-icon' style={{display: props.prevData.weather_state_abbr ? 'block' : 'none'}}><img alt='' src={`https://www.metaweather.com/static/img/weather/${props.prevData.weather_state_abbr}.svg`}/></span>
 
     return(
-        <div>
+        <div className='weather-block'>
             <div style={{display: props.prevData.the_temp ? 'block' : 'none'}}>{theTempF} ºF / {theTempC} ºC</div>
             <div style={{display: props.prevData.weather_state_name ? 'block' : 'none'}}>{generalCondition}</div>
             <div style={{visibility: props.prevData.humidity ? 'visible' : 'hidden'}}>Humidity: {props.prevData.humidity}%</div>

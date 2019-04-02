@@ -2181,9 +2181,9 @@ const CityData = [
     {
         cityGmtDifferential: 0,
         woeid: "1339615",
-        country: "Côte d´Ivoire",
+        country: "Côte d' Ivoire",
         city: "Abidjan",
-        googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16270547.16967074!2d-12.967023547015948!3d5.37089974487035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959121%3A0x3fe70ddce19221a6!2sAbidjan%2C+C%C3%B4te+d&#39;Ivoire!5e0!3m2!1sen!2sus!4v1554216075587!5m2!1sen!2sus"
+        googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16270565.49428552!2d-12.966308634243406!3d5.370213334401329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1ea5311959121%3A0x3fe70ddce19221a6!2sAbidjan%2C+C%C3%B4te+d;Ivoire!5e0!3m2!1sen!2sus!4v1554231495041!5m2!1sen!2sus"
     },
 
     {

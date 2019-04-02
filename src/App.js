@@ -13,7 +13,7 @@ class App extends React.Component {
             citySelection: null,
             woeid: null,
             cityGmtDifferential: 0,
-            googleMap: null
+            googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d65369129.86842964!2d-53.67335007454488!3d25.97137352763425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc22482523302153%3A0xb7a6f81873dfd75a!2sWestern+Sahara!5e0!3m2!1sen!2sus!4v1554230084495!5m2!1sen!2sus"
         }
         this.countryInput = this.countryInput.bind(this);
         this.stateInput = this.stateInput.bind(this);
@@ -27,8 +27,7 @@ class App extends React.Component {
                 countrySelection: e.target.value,
                 stateSelection: null,
                 citySelection: null,
-                woeid: null,
-                googleMap: null
+                woeid: null
             })
         }
 
@@ -37,15 +36,13 @@ class App extends React.Component {
         this.setState({
             stateSelection: e.target.value,
             citySelection: null,
-            woeid: null,
-            googleMap: null
+            woeid: null
         })
     }
     cityInput(e) {
         this.setState({
             citySelection: e.target.value,
-            woeid: null,
-            googleMap: null
+            woeid: null
         })
     }
     woeidInput(e) {
@@ -150,7 +147,8 @@ class App extends React.Component {
             //Return all the drop down menus by placing the arrays of the option component and conditionally render the states array if the countrySelection is 'United States'
         return(
             <div>
-                <div className='input-container' style={{display: this.state.cityGmtDifferential === 0 ? 'block' : 'none'}}>
+                <div className='input-container' style={{display: this.state.woeid === null ? 'block' : 'none'}}>
+                    <iframe className="map" title="googMap" src={this.state.googleMap}></iframe>
                     <select className='country-drop-down' onChange={this.countryInput}>
                         <option>Country</option>{countries}
                     </select>

@@ -94,7 +94,6 @@ class GetWeatherData extends React.Component {
                 this.parseTimeAndDifferential();
                 this.fetchPrevData();
                 this.fetchCurrData();
-                document.body.addEventListener('touchstart', function(e){ e.preventDefault(); }); //Prevent scrolling on mobile devices... overflow: hidden; in css is only working on desktop for some reason
             }
         }, 10)
     }

@@ -116,15 +116,8 @@ body {
 
 */
 
-.map {
-    position: absolute;
+html {
     overflow: hidden;
-    top: -28%;
-    left: -20%;
-    width: 140%;
-    height: 135%;
-    z-index: -5;
-    opacity: .9;
 }
 
 body {
@@ -132,9 +125,22 @@ body {
     font-size: 16px;
     text-shadow: 2px 2px 7px rgba(0,0,0,.2);
     margin: 0;
-    overflow: hidden;
     line-height: 1.4;
 }
+
+.map {
+    position: fixed;
+    top: -28%;
+    left: -20%;
+    width: 140%;
+    height: 135%;
+    z-index: -5;
+    opacity: .3;
+}
+
+
+
+
 
 
 

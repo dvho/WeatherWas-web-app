@@ -121,7 +121,7 @@ class GetWeatherData extends React.Component {
         return (
             <div className='results-container' style={{display: this.state.year === 0 ? 'none' : 'flex'}}>
 
-            <iframe className="map" src={this.state.googleMap} frameborder="0" allowfullscreen></iframe>
+            <iframe className="map" title="googMap" src={this.state.googleMap}></iframe>
 
                 <div className='current-block'><div><CurrDateAndTime state={this.state}/><WeatherBlock prevData={currentWeather}/></div></div>
 

@@ -62,32 +62,38 @@ class App extends React.Component {
         } else if (this.state.citySelection === 'Birmingham' && this.state.countrySelection === 'United Kingdom') {
             this.setState({
                 woeid: '12723',
-                cityGmtDifferential: 0
+                cityGmtDifferential: 0,
+                googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4973637.488008223!2d-6.3481355607757735!3d52.505675763641094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870942d1b417173%3A0xca81fef0aeee7998!2sBirmingham%2C+UK!5e0!3m2!1sen!2sus!4v1554207276895!5m2!1sen!2sus"
             })
         } else if (this.state.citySelection === 'Birmingham' && this.state.countrySelection === 'United States') {
             this.setState({
                 woeid: '2364559',
-                cityGmtDifferential: -5
+                cityGmtDifferential: -5,
+                googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6809261.416296754!2d-91.33482642291096!3d33.55767150280028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888911df5885bfd3%3A0x25507409eaba54ce!2sBirmingham%2C+AL!5e0!3m2!1sen!2sus!4v1554180841624!5m2!1sen!2sus"
             })
         } else if (this.state.citySelection === 'Manchester' && this.state.countrySelection === 'United Kingdom') {
             this.setState({
                 woeid: '28218',
-                cityGmtDifferential: 0
+                cityGmtDifferential: 0,
+                googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4860348.19422484!2d-6.70785562409263!3d53.50032084974938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4d4c5226f5db%3A0xd9be143804fe6baa!2sManchester%2C+UK!5e0!3m2!1sen!2sus!4v1554207245320!5m2!1sen!2sus"
             })
         } else if (this.state.citySelection === 'Manchester' && this.state.countrySelection === 'United States') {
             this.setState({
                 woeid: '2444674',
-                cityGmtDifferential: -4
+                cityGmtDifferential: -4,
+                googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5976012.811380833!2d-75.92892472783633!3d42.99986085454899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e24ed668666ca3%3A0x6b0432461f357179!2sManchester%2C+NH!5e0!3m2!1sen!2sus!4v1554182089213!5m2!1sen!2sus"
             })
         } else if (this.state.citySelection === 'Portland' && this.state.stateSelection === 'Maine') {
             this.setState({
                 woeid: '2475688',
-                cityGmtDifferential: -4
+                cityGmtDifferential: -4,
+                googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5907837.389055136!2d-74.69599720702428!3d43.69628626628062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb29c72aab0ee2d%3A0x7e9db6b53372fa29!2sPortland%2C+ME!5e0!3m2!1sen!2sus!4v1554182034342!5m2!1sen!2sus"
             })
         } else if (this.state.citySelection === 'Portland' && this.state.stateSelection === 'Oregon') {
             this.setState({
                 woeid: '2475687',
-                cityGmtDifferential: -7
+                cityGmtDifferential: -7,
+                googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5719905.896192765!2d-127.13870834311085!3d45.57199102439826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950b0b7da97427%3A0x1c36b9e6f6d18591!2sPortland%2C+OR!5e0!3m2!1sen!2sus!4v1554182730021!5m2!1sen!2sus"
             })
         }
     }

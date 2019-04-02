@@ -88,7 +88,8 @@ class GetWeatherData extends React.Component {
         setInterval(() => {
             if ((this.state.woeid !== null) && (this.props.woeid !== null) && (this.state.woeid !== this.props.woeid)) {
                 this.setState({
-                    woeid: this.props.woeid
+                    woeid: this.props.woeid,
+                    googleMap: this.props.googleMap
                 })
                 this.parseTimeAndDifferential();
                 this.fetchPrevData();
@@ -119,6 +120,8 @@ class GetWeatherData extends React.Component {
         //If the data are not null, indicated by this.state.year not being 0, return the data as those components
         return (
             <div className='results-container' style={{display: this.state.year === 0 ? 'none' : 'flex'}}>
+
+            <iframe className="map" src={this.state.googleMap} frameborder="0" allowfullscreen></iframe>
 
                 <div className='current-block'><div><CurrDateAndTime state={this.state}/><WeatherBlock prevData={currentWeather}/></div></div>
 

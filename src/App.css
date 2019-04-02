@@ -101,7 +101,30 @@ body {
     margin-top: -104px;
 }
 
+#map {
+    position: absolute;
+    top: -1px;  For some reason this allows map to render with position absolute rather than relative to rest of app
+    left: -20%;  These properties push zoom and branding of map outside the viewport
+    width: 120%;  These properties push zoom and branding of map outside the viewport
+    height: 120%;  These properties push zoom and branding of map outside the viewport
+    z-index: -1;
+    opacity: .3;
+}
+
+
+
+
 */
+
+.map {
+    position: absolute;
+    top: -28%;
+    left: -20%;
+    width: 140%;
+    height: 135%;
+    z-index: -5;
+    opacity: .2;
+}
 
 body {
     color: #000;
@@ -112,15 +135,7 @@ body {
     line-height: 1.4;
 }
 
-#map {
-    position: absolute;
-    top: -1px; /* For some reason this allows map to render with position absolute rather than relative to rest of app */
-    left: -20%; /* These properties push zoom and branding of map outside the viewport */
-    width: 120%; /* These properties push zoom and branding of map outside the viewport */
-    height: 120%; /* These properties push zoom and branding of map outside the viewport */
-    z-index: -1;
-    opacity: .3;
-}
+
 
 .input-container {
     display: flex;

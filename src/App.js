@@ -26,7 +26,8 @@ class App extends React.Component {
                 countrySelection: e.target.value,
                 stateSelection: null,
                 citySelection: null,
-                woeid: null
+                woeid: null,
+                googleMap: null
             })
         }
 
@@ -50,7 +51,8 @@ class App extends React.Component {
                 if (i.city === this.state.citySelection) {
                     this.setState({
                         woeid: i.woeid,
-                        cityGmtDifferential: i.cityGmtDifferential
+                        cityGmtDifferential: i.cityGmtDifferential,
+                        googleMap: i.googleMap
                     })
                 }
             })
@@ -151,7 +153,7 @@ class App extends React.Component {
                     </select>
                     <button className='submit' onClick={this.woeidInput}>Submit!</button>
                 </div>
-                <GetWeatherData woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential}/>
+                <GetWeatherData woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential} googleMap={this.state.googleMap}/>
             </div>
         )
     }

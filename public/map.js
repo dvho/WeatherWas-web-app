@@ -1,3 +1,5 @@
+/*
+
 var zoom = 6;
 var lon = -74.006;
 var lat = 40.712
@@ -14,3 +16,5 @@ var map = new ol.Map({
           zoom: zoom //Initial Zoom Level
         })
       });
+
+*/

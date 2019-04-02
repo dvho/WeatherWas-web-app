@@ -149,10 +149,19 @@ body {
 
 .results-container {
     height: 100vh; /* Make container height equal to and responsive to viewport height */
+    margin-top: 40px;
     min-width: 320px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+}
+.location-block {
+    position: relative;
+    left: 70px;
+    margin-bottom: -16px;
+    font-size: 42px;
+    font-style: italic;
+    font-weight: bold;
 }
 .current-block {
     display: flex;
@@ -160,8 +169,7 @@ body {
     min-height: 270px;
     flex-direction: column;
     padding-left: 8%;
-    margin-bottom: -54px;
-    /* background-color: blue; This value will be set according to sky condition data */
+    margin-bottom: -44px;
 }
 .chronology-slider {
     display: flex;
@@ -169,8 +177,7 @@ body {
     transform: rotate(180deg);
     margin-left: 8%;
     width: 82%;
-    margin-top: -56px;
-
+    margin-top: 6px;
 }
 .previous-block {
     display: flex;
@@ -179,22 +186,29 @@ body {
     flex-direction: column;
     padding-left: 8%;
     margin-bottom: 10%;
-    /* background-color: gray; This value will be set according to sky condition data */
 }
 
 .weather-block {
-    margin-top: -30px;
+    margin-top: -24px;
+    font-size: 22px;
 }
 .time {
     position: relative;
     color: red;
-    top: -16px;
-    left: 104px;
+    font-size: 30px;
+    top: -44px;
+}
+.date {
+    position: relative;
+    top: -6px;
+    left: 120px;
+    margin-bottom: 0px;
+    font-size: 26px;
 }
 .wind-data {
     position: relative;
-    top: -67px;
-    left: 160px;
+    top: -92px;
+    left: 190px;
 }
 
 

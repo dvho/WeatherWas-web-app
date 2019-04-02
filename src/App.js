@@ -160,7 +160,7 @@ class App extends React.Component {
                     </select>
                     <button className='submit' onClick={this.woeidInput}>Submit!</button>
                 </div>
-                <GetWeatherData woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential} googleMap={this.state.googleMap}/>
+                <GetWeatherData woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential} googleMap={this.state.googleMap} citySelection={this.state.citySelection}/>
             </div>
         )
     }

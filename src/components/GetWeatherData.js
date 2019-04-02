@@ -23,7 +23,8 @@ class GetWeatherData extends React.Component {
             woeid: 'null',
             cityGmtDifferential: 0,
             netDifferential: 0,
-            historyChoice: 0
+            historyChoice: 0,
+            citySelection: null
         }
         this.parseTimeAndDifferential = this.parseTimeAndDifferential.bind(this);
         this.fetchCurrData = this.fetchCurrData.bind(this);
@@ -89,7 +90,8 @@ class GetWeatherData extends React.Component {
             if ((this.state.woeid !== null) && (this.props.woeid !== null) && (this.state.woeid !== this.props.woeid)) {
                 this.setState({
                     woeid: this.props.woeid,
-                    googleMap: this.props.googleMap
+                    googleMap: this.props.googleMap,
+                    citySelection: this.props.citySelection
                 })
                 this.parseTimeAndDifferential();
                 this.fetchPrevData();
@@ -97,7 +99,6 @@ class GetWeatherData extends React.Component {
             }
         }, 10)
     }
-
 
     render() {
         //Render previousWeather by looping over array and passing the parsed timestamp as props to PrevDateAndTime and the localGmtDifferential to the WeatherBlock
@@ -123,7 +124,9 @@ class GetWeatherData extends React.Component {
 
                 <iframe className="map" title="googMap" src={this.state.googleMap}></iframe>
 
-                <div className='current-block'><div><CurrDateAndTime state={this.state}/><WeatherBlock prevData={currentWeather}/></div></div>
+
+
+                <div className='current-block'><div className='location-block'>{this.state.citySelection}</div><div><CurrDateAndTime state={this.state}/><WeatherBlock prevData={currentWeather}/></div></div>
 
                 <input className='chronology-slider' type='range' min='0' max={maxHistoryRange} onChange={this.chooseWeatherBlock}/>
 

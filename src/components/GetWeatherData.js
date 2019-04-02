@@ -128,7 +128,7 @@ class GetWeatherData extends React.Component {
 
                 <div className='current-block'><div className='location-block'>{this.state.citySelection}</div><div><CurrDateAndTime state={this.state}/><WeatherBlock prevData={currentWeather}/></div></div>
 
-                <input className='chronology-slider' type='range' min='0' max={maxHistoryRange} onChange={this.chooseWeatherBlock}/>
+                <span className="last-week">Last Week</span><input className='chronology-slider' type='range' min='0' max={maxHistoryRange} onChange={this.chooseWeatherBlock}/><span className="today">Today</span>
 
                 <div className='previous-block'>{previousWeather[this.state.historyChoice]}</div>
             </div>

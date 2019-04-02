@@ -171,19 +171,41 @@ body {
     padding-left: 8%;
     margin-bottom: -44px;
 }
+
 .chronology-slider {
-    display: flex;
-    flex: 1;
+    /* Flex properties have to be removed otherwise height of slider won't be 1px */
     transform: rotate(180deg);
-    margin-left: 8%;
-    width: 82%;
-    margin-top: 24px;
+    background-color: blue;
+    margin-left: 110px;
+    width: 34%;
+    margin-top: -10px;
+    margin-bottom: 6px;
+    -webkit-appearance: none;
+    height: 1px;
+    background: black;
+    outline: none;
+    opacity: 1;
 }
+.last-week {
+    position: relative;
+    margin-top: 20px;
+    left: 30px;
+    font-style: italic;
+}
+.today {
+    position: relative;
+    margin-left: 126px;
+    top: -19px;
+    left: 34%;
+    font-style: italic;
+}
+
 .previous-block {
     display: flex;
     flex: 1;
     min-height: 270px;
     flex-direction: column;
+    margin-top: -20px;
     padding-left: 8%;
     margin-bottom: 10%;
 }

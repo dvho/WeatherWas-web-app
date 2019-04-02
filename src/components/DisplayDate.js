@@ -82,7 +82,7 @@ function DisplayDate(props) {
     }
 
     return(
-        <h3 className='date'>{dayOfWeek}, {month} {day}</h3>
+        <div className='date'>{dayOfWeek},<br/>&nbsp;&nbsp;{month} {day}</div>
     )
 
 }

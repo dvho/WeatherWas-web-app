@@ -149,7 +149,7 @@ body {
 
 .results-container {
     height: 100vh; /* Make container height equal to and responsive to viewport height */
-    margin-top: 40px;
+    margin-top: 20px;
     min-width: 320px;
     display: flex;
     flex-direction: column;
@@ -157,7 +157,7 @@ body {
 }
 .location-block {
     position: relative;
-    left: 70px;
+    left: 40px;
     margin-bottom: -16px;
     font-size: 42px;
     font-style: italic;
@@ -177,7 +177,7 @@ body {
     transform: rotate(180deg);
     margin-left: 8%;
     width: 82%;
-    margin-top: 6px;
+    margin-top: 24px;
 }
 .previous-block {
     display: flex;
@@ -189,25 +189,27 @@ body {
 }
 
 .weather-block {
-    margin-top: -24px;
+    margin-top: -6px;
     font-size: 22px;
 }
 .time {
     position: relative;
     color: red;
-    font-size: 30px;
-    top: -44px;
+    font-size: 34px;
+    top: -30px;
 }
 .date {
     position: relative;
-    top: -6px;
-    left: 120px;
+    font-style: italic;
+    top: 20px;
+    left: 150px;
     margin-bottom: 0px;
     font-size: 26px;
+    line-height: 1;
 }
 .wind-data {
     position: relative;
-    top: -92px;
+    top: -91px;
     left: 190px;
 }
 

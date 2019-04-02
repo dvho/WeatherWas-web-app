@@ -12,7 +12,8 @@ class App extends React.Component {
             stateSelection: null,
             citySelection: null,
             woeid: null,
-            cityGmtDifferential: 0
+            cityGmtDifferential: 0,
+            googleMap: null
         }
         this.countryInput = this.countryInput.bind(this);
         this.stateInput = this.stateInput.bind(this);
@@ -36,13 +37,15 @@ class App extends React.Component {
         this.setState({
             stateSelection: e.target.value,
             citySelection: null,
-            woeid: null
+            woeid: null,
+            googleMap: null
         })
     }
     cityInput(e) {
         this.setState({
             citySelection: e.target.value,
-            woeid: null
+            woeid: null,
+            googleMap: null
         })
     }
     woeidInput(e) {

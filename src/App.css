@@ -123,7 +123,7 @@ html {
 body {
     color: #000;
     font-size: 16px;
-    text-shadow: 2px 2px 7px rgba(0,0,0,.2);
+    text-shadow: 0px 0px 5px rgba(255,255,255,.8);
     margin: 0;
     line-height: 1.4;
 }
@@ -141,9 +141,6 @@ body {
 
 
 
-
-
-
 .input-container {
     display: flex;
 }
@@ -151,7 +148,7 @@ body {
 
 
 .results-container {
-    height: 100vh; /* Make container height equal and responsive to viewport height */
+    height: 100vh; /* Make container height equal to and responsive to viewport height */
     min-width: 320px;
     display: flex;
     flex-direction: column;

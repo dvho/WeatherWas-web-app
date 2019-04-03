@@ -120,7 +120,7 @@ class GetWeatherData extends React.Component {
 
         //If the data are not null, indicated by this.state.year not being 0, return the data as those components
         return (
-            <div className='results-container' style={{display: this.state.year === 0 ? 'none' : 'flex'}}>
+            <div className='container' style={{display: this.state.year === 0 ? 'none' : 'flex'}}>
 
                 <iframe className="map" title="googMap" src={this.state.googleMap}></iframe>
 

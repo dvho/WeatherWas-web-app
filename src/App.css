@@ -141,13 +141,9 @@ body {
 
 
 
-.input-container {
-    display: flex;
-}
 
 
-
-.results-container {
+.container {
     height: 100vh; /* Make container height equal to and responsive to viewport height */
     margin-top: 20px;
     min-width: 320px;
@@ -157,6 +153,7 @@ body {
 }
 .location-block {
     position: relative;
+    font-family: serif;
     left: 40px;
     margin-bottom: -16px;
     font-size: 42px;
@@ -236,31 +233,16 @@ body {
 }
 
 
-
-
-
-
-.country-drop-down {
-    font-size: 30px;
-    border: none;
-    background-color: red;
-    opacity: .5;
-}
-.state-drop-down {
-    font-size: 30px;
-    border: none;
-    background-color: blue;
-    opacity: .5;
-}
-.city-drop-down {
-    font-size: 30px;
-    border: none;
-    background-color: green;
-    opacity: .5;
-}
-.submit {
-    font-size: 30px;
-    border: none;
-    background-color: orange;
-    opacity: .5;
+.drop-down {
+    position: relative;
+    top: 3px;
+    left: 37px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 42px;
+    background-color: transparent;
+    opacity: 1;
+    color: #000;
+    border: 1px solid red;
 }

@@ -147,18 +147,18 @@ class App extends React.Component {
             //Return all the drop down menus by placing the arrays of the option component and conditionally render the states array if the countrySelection is 'United States'
         return(
             <div>
-                <div className='input-container' style={{display: this.state.woeid === null ? 'block' : 'none'}}>
+                <div className='container current-block' style={{display: this.state.woeid === null ? 'block' : 'none'}}>
                     <iframe className="map" title="googMap" src={this.state.googleMap}></iframe>
-                    <select className='country-drop-down' onChange={this.countryInput}>
+                    <select className='drop-down' style={{display: this.state.countrySelection === null ? 'block' : 'none'}} onChange={this.countryInput}>
                         <option>Country</option>{countries}
                     </select>
-                    <select style={{display: this.state.countrySelection === 'United States' ? 'inline' : 'none'}} className='state-drop-down' onChange={this.stateInput}>
+                    <select className='drop-down' style={{display: this.state.countrySelection === 'United States' && this.state.stateSelection === null ? 'block' : 'none'}} onChange={this.stateInput}>
                         <option>State</option>{states}
                     </select>
-                    <select className='city-drop-down' onChange={this.cityInput}>
+                    <select className='drop-down' style={{display: ((this.state.countrySelection !== null) && (this.state.countrySelection !== 'United States')) || (this.state.countrySelection === 'United States' && this.state.stateSelection !== null) ? 'block' : 'none'}} onChange={this.cityInput}>
                         <option>City</option>{cities}
                     </select>
-                    <button className='submit' onClick={this.woeidInput}>Submit!</button>
+                    <button className='drop-down' onClick={this.woeidInput}>Submit!</button>
                 </div>
                 <GetWeatherData woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential} googleMap={this.state.googleMap} citySelection={this.state.citySelection}/>
             </div>

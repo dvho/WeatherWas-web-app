@@ -235,8 +235,9 @@ body {
 
 .drop-down {
     position: relative;
-    top: 3px;
-    left: 37px;
+    top: 2px;
+    left: 31px;
+    width: 185px;
     font-style: italic;
     font-weight: bold;
     font-family: serif;

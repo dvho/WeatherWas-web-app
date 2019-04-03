@@ -43,7 +43,8 @@ class App extends React.Component {
         this.setState({
             citySelection: e.target.value,
             woeid: null
-        })
+        });
+        setTimeout(this.woeidInput, 0)
     }
     woeidInput(e) {
         if (this.state.citySelection !== 'City' && this.state.citySelection !== null && this.state.citySelection !== 'Birmingham' && this.state.citySelection !== 'Portland' && this.state.citySelection !== 'Manchester') {
@@ -158,7 +159,6 @@ class App extends React.Component {
                     <select className='drop-down' style={{display: ((this.state.countrySelection !== null) && (this.state.countrySelection !== 'United States')) || (this.state.countrySelection === 'United States' && this.state.stateSelection !== null) ? 'block' : 'none'}} onChange={this.cityInput}>
                         <option>City</option>{cities}
                     </select>
-                    <button className='drop-down' onClick={this.woeidInput}>Submit!</button>
                 </div>
                 <GetWeatherData woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential} googleMap={this.state.googleMap} citySelection={this.state.citySelection}/>
             </div>

@@ -72,7 +72,7 @@ body {
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .chronology-slider:hover {
-  opacity: .5;
+  opacity: .65;
   transition: opacity .25s;
 }
 .chronology-slider::-webkit-slider-thumb {

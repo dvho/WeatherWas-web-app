@@ -1,6 +1,6 @@
 # Weather Was
-Note: The weather API used in the project is still in beta and the data coming back has inaccuracies. Once the API data is accurate I will build out the styling and front-end formatting.
-On all weather apps you can see what the weather is and what it's expected to be, but you can never see what it was. _Weather Was_  is a weather app made for terrestrial humans. Because over 99.999999% of human beings live on the ground, we're more concerned with the condition of the ground. The condition of the ground is naturally deduced from knowing what the _Weather Was_, hence the purpose and name of this app.
+Note: _The weather API used in this project is still in beta and the data coming back may have inaccuracies._
+In an everyday weather app you'll see what the weather is and what it is forecast to be, but it will never tell you what the _Weather Was._ This app, _Weather Was_, is a weather app made for people who live on the ground, not in the sky. Such people are more concerned with the condition of the ground much more than the condition of the sky. The condition of the ground is naturally deduced from knowing what the _Weather Was._ 
 
 _________________________
 

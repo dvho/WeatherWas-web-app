@@ -122,9 +122,11 @@ class GetWeatherData extends React.Component {
         return (
             <div className='container' style={{display: this.state.year === 0 ? 'none' : 'flex'}}>
 
+                <div className='veil'></div>
+
                 <iframe className="map" title="googMap" src={this.state.googleMap}></iframe>
 
-
+                <div style={{display: this.state.currData === null || this.state.prevData === null ? 'flex' : 'none'}} class="loading-spinner"><div></div><div></div></div>
 
                 <div className='current-block'><div className='location-block'>{this.state.citySelection}</div><div><CurrDateAndTime state={this.state}/><WeatherBlock prevData={currentWeather}/></div></div>
 

@@ -149,6 +149,7 @@ class App extends React.Component {
         return(
             <div>
                 <div className='container current-block' style={{display: this.state.woeid === null ? 'block' : 'none'}}>
+                    <div className='veil'></div>
                     <iframe className="map" title="googMap" src={this.state.googleMap}></iframe>
                     <select className='drop-down' style={{display: this.state.countrySelection === null ? 'block' : 'none'}} onChange={this.countryInput}>
                         <option>Country</option>{countries}

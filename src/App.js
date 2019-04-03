@@ -151,15 +151,18 @@ class App extends React.Component {
                 <div className='container current-block' style={{display: this.state.woeid === null ? 'block' : 'none'}}>
                     <div className='veil'></div>
                     <iframe className="map" title="googMap" src={this.state.googleMap}></iframe>
+                    <span className='in'>In
                     <select className='drop-down' style={{display: this.state.countrySelection === null ? 'block' : 'none'}} onChange={this.countryInput}>
                         <option>Country</option>{countries}
                     </select>
+                    </span>
                     <select className='drop-down' style={{display: this.state.countrySelection === 'United States' && this.state.stateSelection === null ? 'block' : 'none'}} onChange={this.stateInput}>
                         <option>State</option>{states}
                     </select>
                     <select className='drop-down' style={{display: ((this.state.countrySelection !== null) && (this.state.countrySelection !== 'United States')) || (this.state.countrySelection === 'United States' && this.state.stateSelection !== null) ? 'block' : 'none'}} onChange={this.cityInput}>
                         <option>City</option>{cities}
                     </select>
+                    <span className='the-weather-was'>the weather <i>was...</i></span>
                 </div>
                 <GetWeatherData woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential} googleMap={this.state.googleMap} citySelection={this.state.citySelection}/>
             </div>

@@ -9,7 +9,7 @@ function Weatherblock(props) {
     if (props.prevData.the_temp) {
         theTempF = Math.round((props.prevData.the_temp * (9/5)) + 32);
         theTempC = Math.round(props.prevData.the_temp)
-    }
+    } 
 
     if ((props.prevData.weather_state_name) && (props.prevData.weather_state_name === 'Heavy Cloud')) {
         generalCondition = 'Cloudy☁️';
@@ -31,7 +31,11 @@ function Weatherblock(props) {
         generalCondition = 'Showers☔';
     } else if ((props.prevData.weather_state_name) && (props.prevData.weather_state_name === 'Clear')) {
         generalCondition = 'Clear🌤️';
+    } else {
+        generalCondition = '_';
     }
+
+    console.log(generalCondition)
 
     //<span className='weather-icon' style={{display: props.prevData.weather_state_abbr ? 'block' : 'none'}}><img alt='' src={`https://www.metaweather.com/static/img/weather/${props.prevData.weather_state_abbr}.svg`}/></span>
 

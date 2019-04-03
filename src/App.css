@@ -124,6 +124,7 @@ body {
 .weather-block {
     margin-top: -6px;
     font-size: 22px;
+    margin-bottom: -48px;
 }
 .time {
     position: relative;
@@ -145,21 +146,39 @@ body {
     top: -91px;
     left: 190px;
 }
-
-.drop-down {
+.in {
     position: relative;
     top: 2px;
-    left: 31px;
-    width: 185px;
+    left: 0px;
+    width: 200px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 42px;
+}
+.drop-down {
+    position: relative;
+    top: -80;
+    margin-top: -55px;
+    left: 54px;
+    width: 200px;
     font-style: italic;
     font-weight: bold;
     font-family: serif;
     font-size: 42px;
     background-color: transparent;
-    opacity: 1;
-    color: #000;
     border: 1px solid tomato;
     cursor: pointer;
+}
+.the-weather-was {
+    position: fixed;
+    top: 90px;
+    left: 42px;
+    font-weight: bold;
+    font-family: serif;
+    font-size: 42px;
+    opacity: 1;
+    color: #000;
 }
 
 .loading-spinner {
@@ -198,14 +217,6 @@ body {
     opacity: 0;
   }
 }
-
-
-
-
-
-
-
-
 
 button {
     display: relative;

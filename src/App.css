@@ -1,5 +1,6 @@
 html {
     overflow: hidden;
+    user-select: none;
 }
 body {
     color: #000;
@@ -30,7 +31,7 @@ body {
 
 .container {
     height: 100vh; /* Make container height equal to and responsive to viewport height */
-    margin-top: 20px;
+    margin-top: 14px;
     min-width: 320px;
     display: flex;
     flex-direction: column;
@@ -39,8 +40,8 @@ body {
 .location-block {
     position: relative;
     font-family: serif;
-    left: 40px;
-    margin-bottom: -16px;
+    left: 56px;
+    margin-bottom: -18px;
     font-size: 42px;
     font-style: italic;
     font-weight: bold;
@@ -51,7 +52,7 @@ body {
     min-height: 270px;
     flex-direction: column;
     padding-left: 8%;
-    margin-bottom: -44px;
+    margin-bottom: -60px;
 }
 .chronology-slider {
     /* Flex properties have to be removed otherwise height of slider won't be 1px */
@@ -105,7 +106,7 @@ body {
     position: relative;
     margin-left: 126px;
     top: -19px;
-    margin-bottom: 18px;
+    margin-bottom: 4px;
     left: 34%;
     font-style: italic;
     font-weight: bold;
@@ -126,7 +127,7 @@ body {
 }
 .time {
     position: relative;
-    color: #227c73;
+    color: hsl(185 25% 34%);
     font-size: 34px;
     top: -30px;
 }
@@ -193,4 +194,39 @@ body {
     height: 200px;
     opacity: 0;
   }
+}
+
+
+
+
+
+
+
+
+
+button {
+    display: relative;
+    margin-left: 80px;
+    margin-top: -64px;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 24px;
+    font-family: serif;
+    color: #000;
+    background-color: hsl(185 25% 79%);
+    border: none;
+    transition: all .15s ease;
+    border-radius: 30px;
+    box-shadow: -14px -6px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+    user-select: none;
+}
+button:active {
+    transform: scale(1.05);
+}
+button:hover {
+    background-color: hsl(359 100% 74%);
+    opacity: .65;
+    color: ivory;
+    transition: all .15s ease;
 }

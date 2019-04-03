@@ -30,8 +30,11 @@ class GetWeatherData extends React.Component {
         this.fetchCurrData = this.fetchCurrData.bind(this);
         this.fetchPrevData = this.fetchPrevData.bind(this);
         this.chooseWeatherBlock = this.chooseWeatherBlock.bind(this);
+        this.reloadPage = this.reloadPage.bind(this);
     }
-
+    reloadPage() {
+        window.location.reload()
+    }
     //Callback function for slider that sets value of slider in state to be used as index of previousWeather array in choosing to display a PrevDateAndTime and WeatherBlock
     chooseWeatherBlock(e) {
         let historyChoice = e.target.value;
@@ -126,13 +129,13 @@ class GetWeatherData extends React.Component {
 
                 <iframe className="map" title="googMap" src={this.state.googleMap}></iframe>
 
-                <div style={{display: this.state.currData === null || this.state.prevData === null ? 'flex' : 'none'}} class="loading-spinner"><div></div><div></div></div>
+                <div style={{display: this.state.currData === null || this.state.prevData === null ? 'flex' : 'none'}} className="loading-spinner"><div></div><div></div></div>
 
                 <div className='current-block'><div className='location-block'>{this.state.citySelection}</div><div><CurrDateAndTime state={this.state}/><WeatherBlock prevData={currentWeather}/></div></div>
 
                 <span className="last-week">Last Week</span><input className='chronology-slider' type='range' min='0' max={maxHistoryRange} onChange={this.chooseWeatherBlock}/><span className="today">Today</span>
 
-                <div className='previous-block'>{previousWeather[this.state.historyChoice]}</div>
+                <div className='previous-block'>{previousWeather[this.state.historyChoice]}<button onClick={this.reloadPage}>Different City</button></div>
             </div>
         );
     }

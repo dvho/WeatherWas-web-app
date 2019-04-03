@@ -148,8 +148,8 @@ body {
 }
 .in {
     position: relative;
-    top: 2px;
-    left: 0px;
+    top: -0px;
+    left: -7px;
     width: 200px;
     font-style: italic;
     font-weight: bold;
@@ -169,16 +169,6 @@ body {
     background-color: transparent;
     border: 1px solid tomato;
     cursor: pointer;
-}
-.the-weather-was {
-    position: fixed;
-    top: 90px;
-    left: 42px;
-    font-weight: bold;
-    font-family: serif;
-    font-size: 42px;
-    opacity: 1;
-    color: #000;
 }
 
 .loading-spinner {

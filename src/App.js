@@ -161,7 +161,7 @@ class App extends React.Component {
                         <select className='drop-down' style={{display: ((this.state.countrySelection !== null) && (this.state.countrySelection !== 'United States')) || (this.state.countrySelection === 'United States' && this.state.stateSelection !== null) ? 'block' : 'none'}} onChange={this.cityInput}>
                             <option>City</option>{cities}
                         </select>
-                        <span className='the-weather-was'>the weather <i>was...</i></span>
+                        the weather was...
                     </span>
                 </div>
                 <GetWeatherData woeid={this.state.woeid} cityGmtDifferential={this.state.cityGmtDifferential} googleMap={this.state.googleMap} citySelection={this.state.citySelection}/>

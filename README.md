@@ -1,6 +1,6 @@
 # Weather Was
 Note: _The weather API used in this project is still in beta and the data coming back may have inaccuracies._
-In an everyday weather app you'll see what the weather is and what it is forecast to be, but it will never tell you what the _Weather Was._ This app, _Weather Was_, is a weather app made for people who live on the ground, not in the sky. Such people are more concerned with the condition of the ground much more than the condition of the sky. The condition of the ground is naturally deduced from knowing what the _Weather Was._ 
+In an everyday weather app you'll see what the weather is and what the weather is forecast to be, but you'll never see  what the weather _was._ This app, _Weather Was_, is a weather app made for people who live on the ground, not in the sky. Such people are concerned with the condition of the ground rather than the condition of the sky. Gratefully, ground conditions are deduced from knowing what the _Weather Was._ 
 
 _________________________
 

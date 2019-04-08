@@ -1,23 +1,25 @@
 # Weather Was
-Note: _The weather API used in this project is still in beta and the data coming back may have inaccuracies._
-In an everyday weather app you'll see what the weather is and what the weather is forecast to be, but you'll never see  what the weather _was._ This app, _Weather Was_, is a weather app made for people who live on the ground, not in the sky. Such people are concerned with the condition of the ground rather than the condition of the sky. Gratefully, ground conditions are deduced from knowing what the _Weather Was._ 
+Note: _The weather API used in this project is still in beta and the data coming back may have inaccuracies._ In your everyday weather app you'll see what the weather _is_ and what it _might be_, but you'll never see  what the weather _was._ Incidentally, most people live on the ground, not in the sky, so their primary concern is what the weather _was_ so they can deduce ground conditions. Your everyday weather app might say 36°F / 2°C and sunny skies this morning, but did it freeze last night? Is there black ice on the roads? You need _Weather Was._
+
+<img src="https://user-images.githubusercontent.com/45696445/55730964-53d07a80-59e7-11e9-8f86-acfabeb1947a.gif">
 
 _________________________
 
 #### How to Use
-* Select country, (state if U.S.), and nearest city to see between a week and 10 days worth of weather leading up to the present moment.
+* Select country, state (if country is the U.S.), and nearest city to see between a week and 10 days worth of weather leading up to the present moment.
 _________________________
 
 #### Features
 - Retrospective weather data
+_ ReactJS
 _________________________
 
 #### Motivation
-On all weather apps you can see what the weather is and what it's expected to be, but you can never see what it was. _Weather Was_  is a weather app made for terrestrial humans. Because over 99.999999% of human beings live on the ground, we're more concerned with the condition of the ground. The condition of the ground is naturally deduced from knowing what the _Weather Was_, hence the purpose and name of this app.
+Long before the days of smartphones, even before the household-ization of the internet, people have often asked why meteorologists are overly concerned with what might happen to the sky when they could prevent more traffic accidents explaining what already happen to the ground. *Knowing what the weather was saves lives.*
 _________________________
 
 #### Notes
-The weather API used in the project is still in beta and the data coming back has inaccuracies. Once the API data is accurate I will build out the styling and front-end formatting.
+The weather API used in this project is still in beta and the data coming back may have inaccuracies. Not every city is supported.
 _________________________
 
 #### License

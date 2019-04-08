@@ -10,8 +10,9 @@ _________________________
 _________________________
 
 #### Features
+- React
+- Flexbox
 - Retrospective weather data
-_ ReactJS
 _________________________
 
 #### Motivation

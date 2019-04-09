@@ -16,7 +16,7 @@ _________________________
 _________________________
 
 #### Motivation
-Long before the days of smartphones, even before the household-ization of the internet, people have often asked why meteorologists are overly concerned with what might happen to the sky when they could prevent more traffic accidents explaining what already happen to the ground. *Knowing what the weather was saves lives.*
+Long before the days of smartphones, even before the household-ization of the internet, people have often asked why meteorologists are overly concerned with what might happen to the sky when they could prevent more traffic accidents explaining what already happened to the ground. *Knowing what the weather was saves lives.*
 _________________________
 
 #### Notes

@@ -23,22 +23,54 @@ class App extends React.Component {
 
     countryInput(e) {
         if (this.countrySelection !== 'United States') {
+            let tempArray = [];
+            let i;
+            for (i = 0; i < CityData.length; i++) {
+                if (CityData[i].country.match(e.target.value)) {
+                    tempArray.push(CityData[i])
+                }
+            }
+            if (tempArray.length === 1) { //If WeatherWas only has data for one city in the chosen country, set the woeid for that city and save the user the extraneous step of having to scroll to that one city
+                this.setState({
+                    citySelection: tempArray[0].city,
+                    woeid: null
+                });
+                setTimeout(this.woeidInput, 0)
+            } else {
+                this.setState({
+                    countrySelection: e.target.value,
+                    stateSelection: null,
+                    citySelection: null,
+                    woeid: null
+                })
+            }
+        }
+    }
+
+    stateInput(e) {
+        let tempArray = [];
+        let i;
+        for (i = 0; i < CityData.length; i++) {
+            if (CityData[i].state !== undefined && CityData[i].state.match(e.target.value)) {
+                tempArray.push(CityData[i])
+            }
+        }
+        if (tempArray.length === 1) { //If WeatherWas only has data for one city in the chosen state, set the woeid for that city and save the user the extraneous step of having to scroll to that one city
             this.setState({
-                countrySelection: e.target.value,
-                stateSelection: null,
+                stateSelection: tempArray[0].state,
+                citySelection: tempArray[0].city,
+                woeid: null
+            });
+            setTimeout(this.woeidInput, 0)
+        } else {
+            this.setState({
+                stateSelection: e.target.value,
                 citySelection: null,
                 woeid: null
             })
         }
+    }
 
-    }
-    stateInput(e) {
-        this.setState({
-            stateSelection: e.target.value,
-            citySelection: null,
-            woeid: null
-        })
-    }
     cityInput(e) {
         this.setState({
             citySelection: e.target.value,
@@ -46,6 +78,7 @@ class App extends React.Component {
         });
         setTimeout(this.woeidInput, 0)
     }
+
     woeidInput(e) {
         if (this.state.citySelection !== 'City' && this.state.citySelection !== null && this.state.citySelection !== 'Birmingham' && this.state.citySelection !== 'Portland' && this.state.citySelection !== 'Manchester') {
             CityData.forEach(i => {
